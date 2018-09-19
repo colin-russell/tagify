@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0650DE2151C75900C6D26C /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0650DD2151C75900C6D26C /* TagViewController.swift */; };
+		3B0650E02151C7B700C6D26C /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0650DF2151C7B700C6D26C /* ProductsViewController.swift */; };
 		3BE2C66C2151AAA900046636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2C66B2151AAA900046636 /* AppDelegate.swift */; };
-		3BE2C66E2151AAA900046636 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2C66D2151AAA900046636 /* ViewController.swift */; };
 		3BE2C6712151AAA900046636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE2C66F2151AAA900046636 /* Main.storyboard */; };
 		3BE2C6732151AAAB00046636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE2C6722151AAAB00046636 /* Assets.xcassets */; };
 		3BE2C6762151AAAB00046636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE2C6742151AAAB00046636 /* LaunchScreen.storyboard */; };
+		3BE2C6802151AFF400046636 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2C67F2151AFF400046636 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0650DD2151C75900C6D26C /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
+		3B0650DF2151C7B700C6D26C /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		3BE2C6682151AAA900046636 /* tagify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tagify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE2C66B2151AAA900046636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BE2C66D2151AAA900046636 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3BE2C6702151AAA900046636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BE2C6722151AAAB00046636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BE2C6752151AAAB00046636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BE2C6772151AAAB00046636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE2C67F2151AFF400046636 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +59,11 @@
 			isa = PBXGroup;
 			children = (
 				3BE2C66B2151AAA900046636 /* AppDelegate.swift */,
-				3BE2C66D2151AAA900046636 /* ViewController.swift */,
 				3BE2C66F2151AAA900046636 /* Main.storyboard */,
+				3BE2C67F2151AFF400046636 /* NetworkManager.swift */,
+				3B0650DD2151C75900C6D26C /* TagViewController.swift */,
 				3BE2C6722151AAAB00046636 /* Assets.xcassets */,
+				3B0650DF2151C7B700C6D26C /* ProductsViewController.swift */,
 				3BE2C6742151AAAB00046636 /* LaunchScreen.storyboard */,
 				3BE2C6772151AAAB00046636 /* Info.plist */,
 			);
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BE2C66E2151AAA900046636 /* ViewController.swift in Sources */,
+				3B0650DE2151C75900C6D26C /* TagViewController.swift in Sources */,
+				3BE2C6802151AFF400046636 /* NetworkManager.swift in Sources */,
+				3B0650E02151C7B700C6D26C /* ProductsViewController.swift in Sources */,
 				3BE2C66C2151AAA900046636 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

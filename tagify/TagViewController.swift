@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TagViewController.swift
 //  tagify
 //
 //  Created by Colin on 2018-09-18.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TagViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
+    
 
 
 }
-

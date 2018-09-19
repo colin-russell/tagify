@@ -1,24 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hjd-HP-TKL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tag View Controller-->
+        <scene sceneID="rys-u3-HEH">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="Hjd-HP-TKL" customClass="TagViewController" customModule="tagify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HBY-dh-1rf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kw2-l5-46g">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hjd-HP-TKL" id="vOz-vc-iq8"/>
+                                    <outlet property="delegate" destination="Hjd-HP-TKL" id="2Dd-Rv-R0v"/>
+                                </connections>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Shopify Shop Tags" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0V-DM-FWu">
+                                <rect key="frame" x="67.5" y="45.5" width="240" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="MGH-Cl-g8j"/>
+                                    <constraint firstAttribute="height" constant="40" id="OXs-3r-kok"/>
+                                </constraints>
+                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kw2-l5-46g" firstAttribute="centerX" secondItem="9Y5-3Y-vUZ" secondAttribute="centerX" id="1kZ-73-c4L"/>
+                            <constraint firstItem="z0V-DM-FWu" firstAttribute="centerX" secondItem="9Y5-3Y-vUZ" secondAttribute="centerX" id="IIO-I7-GKB"/>
+                            <constraint firstItem="kw2-l5-46g" firstAttribute="width" secondItem="HBY-dh-1rf" secondAttribute="width" id="Lrr-JA-4ux"/>
+                            <constraint firstItem="9Y5-3Y-vUZ" firstAttribute="bottom" secondItem="kw2-l5-46g" secondAttribute="bottom" id="VDs-cz-iYH"/>
+                            <constraint firstItem="kw2-l5-46g" firstAttribute="height" secondItem="HBY-dh-1rf" secondAttribute="height" multiplier="0.85" id="hEs-Xn-QXc"/>
+                            <constraint firstItem="kw2-l5-46g" firstAttribute="firstBaseline" secondItem="z0V-DM-FWu" secondAttribute="baseline" constant="14.5" symbolType="layoutAnchor" id="rSB-zf-bUO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Y5-3Y-vUZ"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6W-gM-gaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="-242.42878560719643"/>
         </scene>
     </scenes>
 </document>

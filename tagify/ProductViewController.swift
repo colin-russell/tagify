@@ -1,14 +1,14 @@
 //
-//  ProductsViewController.swift
+//  ProductViewController.swift
 //  tagify
 //
-//  Created by Colin on 2018-09-18.
+//  Created by Colin on 2018-09-19.
 //  Copyright © 2018 Colin Russell. All rights reserved.
 //
 
 import UIKit
 
-class ProductsViewController: UIViewController {
+class ProductViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

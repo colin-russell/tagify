@@ -22,14 +22,28 @@ class NetworkManager: NSObject {
             else { print("URL session failure: \(error!.localizedDescription)") }
             
             DispatchQueue.main.async {
-//                guard let results = try! JSONSerialization.jsonObject(with: data!, options: []) as? [[String : Any]] else {
-//                    print("Invalid JSON")
-//                    completion([""])
-//                    return
-//                }
+                guard let results = try! JSONSerialization.jsonObject(with: data!, options: []) as? [String : [[String : Any]]] else {
+                    print("Invalid JSON")
+                    completion([""])
+                    return
+                }
                 
-                print("results: \(data!.base64EncodedString())")
-                completion(["done"])
+                guard let products = results["products"] else { return }
+                
+                var tagSet = Set<String>()
+                
+                for product in products {
+                    guard let tagString = product["tags"] as? String else { return }
+                    
+                    let tagArray = tagString.split(separator: ",")
+                    
+                    for element in tagArray {
+                        tagSet.insert(element.trimmingCharacters(in: NSCharacterSet.whitespaces))
+                    }
+//                    tagSet.insert(product["tags"] as! String)
+                }
+                
+                completion(tagSet.sorted())
             }
         }
         

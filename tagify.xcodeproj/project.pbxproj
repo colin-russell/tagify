@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B0650DE2151C75900C6D26C /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0650DD2151C75900C6D26C /* TagViewController.swift */; };
 		3B0650E02151C7B700C6D26C /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0650DF2151C7B700C6D26C /* ProductsViewController.swift */; };
+		3B910F862152A84B008E3BCE /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B910F852152A84B008E3BCE /* Product.swift */; };
 		3BE2C66C2151AAA900046636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2C66B2151AAA900046636 /* AppDelegate.swift */; };
 		3BE2C6712151AAA900046636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE2C66F2151AAA900046636 /* Main.storyboard */; };
 		3BE2C6732151AAAB00046636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE2C6722151AAAB00046636 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		3B0650DD2151C75900C6D26C /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		3B0650DF2151C7B700C6D26C /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		3B910F852152A84B008E3BCE /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3BE2C6682151AAA900046636 /* tagify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tagify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE2C66B2151AAA900046636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BE2C6702151AAA900046636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,12 +60,13 @@
 		3BE2C66A2151AAA900046636 /* tagify */ = {
 			isa = PBXGroup;
 			children = (
-				3BE2C66B2151AAA900046636 /* AppDelegate.swift */,
 				3BE2C66F2151AAA900046636 /* Main.storyboard */,
+				3BE2C66B2151AAA900046636 /* AppDelegate.swift */,
 				3BE2C67F2151AFF400046636 /* NetworkManager.swift */,
+				3B910F852152A84B008E3BCE /* Product.swift */,
+				3B0650DF2151C7B700C6D26C /* ProductsViewController.swift */,
 				3B0650DD2151C75900C6D26C /* TagViewController.swift */,
 				3BE2C6722151AAAB00046636 /* Assets.xcassets */,
-				3B0650DF2151C7B700C6D26C /* ProductsViewController.swift */,
 				3BE2C6742151AAAB00046636 /* LaunchScreen.storyboard */,
 				3BE2C6772151AAAB00046636 /* Info.plist */,
 			);
@@ -143,6 +146,7 @@
 			files = (
 				3B0650DE2151C75900C6D26C /* TagViewController.swift in Sources */,
 				3BE2C6802151AFF400046636 /* NetworkManager.swift in Sources */,
+				3B910F862152A84B008E3BCE /* Product.swift in Sources */,
 				3B0650E02151C7B700C6D26C /* ProductsViewController.swift in Sources */,
 				3BE2C66C2151AAA900046636 /* AppDelegate.swift in Sources */,
 			);

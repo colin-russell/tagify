@@ -25,26 +25,19 @@
                                     <outlet property="delegate" destination="Hjd-HP-TKL" id="2Dd-Rv-R0v"/>
                                 </connections>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Shopify Shop Tags" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0V-DM-FWu">
-                                <rect key="frame" x="67.5" y="45.5" width="240" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="MGH-Cl-g8j"/>
-                                    <constraint firstAttribute="height" constant="40" id="OXs-3r-kok"/>
-                                </constraints>
-                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopifyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pmE-JP-Lih">
+                                <rect key="frame" x="90" y="30" width="195" height="33.5"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kw2-l5-46g" firstAttribute="centerX" secondItem="9Y5-3Y-vUZ" secondAttribute="centerX" id="1kZ-73-c4L"/>
-                            <constraint firstItem="z0V-DM-FWu" firstAttribute="centerX" secondItem="9Y5-3Y-vUZ" secondAttribute="centerX" id="IIO-I7-GKB"/>
+                            <constraint firstItem="pmE-JP-Lih" firstAttribute="top" secondItem="9Y5-3Y-vUZ" secondAttribute="top" constant="10" id="DQc-Df-NjN"/>
                             <constraint firstItem="kw2-l5-46g" firstAttribute="width" secondItem="HBY-dh-1rf" secondAttribute="width" id="Lrr-JA-4ux"/>
                             <constraint firstItem="9Y5-3Y-vUZ" firstAttribute="bottom" secondItem="kw2-l5-46g" secondAttribute="bottom" id="VDs-cz-iYH"/>
+                            <constraint firstItem="pmE-JP-Lih" firstAttribute="height" secondItem="HBY-dh-1rf" secondAttribute="height" multiplier="0.05" id="Ysb-Tx-Tos"/>
+                            <constraint firstItem="pmE-JP-Lih" firstAttribute="centerX" secondItem="9Y5-3Y-vUZ" secondAttribute="centerX" id="auJ-eH-2Bd"/>
                             <constraint firstItem="kw2-l5-46g" firstAttribute="height" secondItem="HBY-dh-1rf" secondAttribute="height" multiplier="0.85" id="hEs-Xn-QXc"/>
-                            <constraint firstItem="kw2-l5-46g" firstAttribute="firstBaseline" secondItem="z0V-DM-FWu" secondAttribute="baseline" constant="14.5" symbolType="layoutAnchor" id="rSB-zf-bUO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Y5-3Y-vUZ"/>
                     </view>
@@ -54,4 +47,7 @@
             <point key="canvasLocation" x="93.599999999999994" y="-242.42878560719643"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shopifyLogo" width="195" height="195"/>
+    </resources>
 </document>

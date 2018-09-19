@@ -14,5 +14,5 @@ struct Product {
     let quantity: Int
 //    let description: String
 //    let picture: UIImage
-//    let tags: [String]
+    let tags: [String]
 }

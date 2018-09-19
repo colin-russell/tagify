@@ -72,20 +72,27 @@ class NetworkManager: NSObject {
                 
                 var productArray = [Product]()
                 
+                
                 for element in productsJSON {
                     guard let name = element["title"] as? String else { return }
                     guard let variants = element["variants"] as? Array<Dictionary<String, Any>> else { return }
+                    guard let tagString = element["tags"] as? String else { return }
                     var quantity = Int()
                     
                     for variant in variants {
                         guard let num = variant["inventory_quantity"] as? Int else { return }
                         quantity += num
                     }
+                    let tags = tagString.split(separator: ",")
+                    var tagArray = [String]()
+                    for tag in tags {
+                        tagArray.append(tag.trimmingCharacters(in: NSCharacterSet.whitespaces))
+                    }
                     
-                    productArray.append(Product(name: name, quantity: quantity))
+                    productArray.append(Product(name: name, quantity: quantity, tags: tagArray))
                 }
                 
-                completion([Product]())
+                completion(productArray)
             }
         }
         

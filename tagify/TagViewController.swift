@@ -33,6 +33,9 @@ class TagViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 spinner.stopAnimating()
                 self.tagTableView.isHidden = false
         }
+        networkManager.fetchAllProducts { (products) in
+            print("products: \(products)")
+        }
     }
 
     // MARK: UITableViewDelegate

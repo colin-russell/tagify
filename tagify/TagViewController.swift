@@ -12,7 +12,10 @@ class TagViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let networkManager = NetworkManager()
+        networkManager.fetchAllTags { (tags) in
+            print("\(tags)")
+        }
         // Do any additional setup after loading the view.
     }
     

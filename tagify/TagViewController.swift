@@ -14,13 +14,15 @@ class TagViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 
     @IBOutlet weak var tagTableView: UITableView!
     var tags = [String]()
+    var selectedTag = String()
+    var products = [Product]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tagTableView.isHidden = true
 
-        let spinner = UIActivityIndicatorView(style: .gray)
+        let spinner = UIActivityIndicatorView(style: .whiteLarge)
         spinner.center = self.view.center
         view.addSubview(spinner)
         spinner.startAnimating()
@@ -34,7 +36,14 @@ class TagViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 self.tagTableView.isHidden = false
         }
         networkManager.fetchAllProducts { (products) in
-            print("products: \(products)")
+            self.products = products
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let pvc = segue.destination as? ProductViewController {
+            pvc.tag = selectedTag
+            pvc.products = products
         }
     }
 
@@ -49,6 +58,13 @@ class TagViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.textLabel?.text = tags[indexPath.row]
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentCell = tableView.cellForRow(at: indexPath)
+        guard let cellText = currentCell?.textLabel?.text else { return }
+        selectedTag = cellText
+        performSegue(withIdentifier:"forward", sender: self)
     }
 
 }

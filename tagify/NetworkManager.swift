@@ -10,6 +10,9 @@ import UIKit
 
 class NetworkManager: NSObject {
     
+    /*
+     Fetches all the tags from the store and puts them in an array
+     */
     func fetchAllTags(completion: @escaping (_ tags: [String]) -> Void) {
         guard let url = URL(string: "https://shopicruit.myshopify.com/admin/products.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6") else { return }
         
@@ -50,6 +53,9 @@ class NetworkManager: NSObject {
         session.finishTasksAndInvalidate()
     }
     
+    /*
+     Fetches all the products from the store and puts them in an array
+     */
     func fetchAllProducts(completion: @escaping (_ tags: [Product]) -> Void) {
         guard let url = URL(string: "https://shopicruit.myshopify.com/admin/products.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6") else { return }
         

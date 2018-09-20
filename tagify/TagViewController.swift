@@ -40,6 +40,10 @@ class TagViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
     
+    /*
+     Sends the selected tag and products array over
+     to the ProductViewController
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let pvc = segue.destination as? ProductViewController {
             pvc.tag = selectedTag

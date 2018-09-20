@@ -10,6 +10,8 @@ import UIKit
 
 class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: Properties
+    
     @IBOutlet weak var productTableView: UITableView!
     var tag = String()
     var products = [Product]()
@@ -21,6 +23,9 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         findProductsWithTag(tag: tag)
     }
     
+    /*
+     Only finds the products with the selected tag
+    */
     func findProductsWithTag(tag: String) {
         for product in products {
             if product.tags.contains(tag) {

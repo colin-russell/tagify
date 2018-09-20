@@ -56,7 +56,9 @@ class TagViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tagCell", for: indexPath)
         cell.textLabel?.text = tags[indexPath.row]
-
+        cell.textLabel?.font = UIFont(name: "Arial Rounded MT Bold", size: 16)
+        cell.textLabel?.textAlignment = .center
+        
         return cell
     }
     

@@ -12,7 +12,6 @@ import UIKit
 struct Product {
     let name: String
     let quantity: Int
-//    let description: String
-//    let picture: UIImage
+    let image: UIImage
     let tags: [String]
 }

@@ -39,7 +39,8 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
         cell.textLabel?.text = "\(foundProducts[indexPath.row].name) Quantity: \(foundProducts[indexPath.row].quantity)"
-        
+        cell.textLabel?.font = UIFont(name: cell.textLabel!.font.fontName, size: 12)
+        cell.imageView?.image = foundProducts[indexPath.row].image
         return cell
     }
 }

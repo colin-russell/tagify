@@ -77,6 +77,8 @@ class NetworkManager: NSObject {
                     guard let name = element["title"] as? String else { return }
                     guard let variants = element["variants"] as? Array<Dictionary<String, Any>> else { return }
                     guard let tagString = element["tags"] as? String else { return }
+                    guard let imageDict = element["image"] as? [String : Any] else { return }
+                    guard let imageURLString = imageDict["src"] as? String else { return }
                     var quantity = Int()
                     
                     for variant in variants {
@@ -89,9 +91,16 @@ class NetworkManager: NSObject {
                         tagArray.append(tag.trimmingCharacters(in: NSCharacterSet.whitespaces))
                     }
                     
-                    productArray.append(Product(name: name, quantity: quantity, tags: tagArray))
+                    var image = UIImage()
+                    
+                    do {
+                        image = try UIImage(data: Data(contentsOf: URL(string: imageURLString)!))!
+                    } catch {
+                        print("error loading image")
+                    }
+                    
+                    productArray.append(Product(name: name, quantity: quantity, image: image, tags: tagArray))
                 }
-                
                 completion(productArray)
             }
         }

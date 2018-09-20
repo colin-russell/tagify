@@ -90,7 +90,7 @@
                                 <rect key="frame" x="0.0" y="147.33333333333331" width="414" height="588.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tagCell" id="EvJ-nX-MaJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" id="EvJ-nX-MaJ">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EvJ-nX-MaJ" id="RmB-Gw-V7p">
@@ -99,6 +99,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RYh-nK-npJ" id="Qjo-ep-Hi0"/>
+                                    <outlet property="delegate" destination="RYh-nK-npJ" id="LOx-mc-nFm"/>
+                                </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAE-qR-P7z">
                                 <rect key="frame" x="0.0" y="20" width="414" height="73.666666666666671"/>
@@ -148,6 +152,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QmW-2C-F0y"/>
                     </view>
+                    <connections>
+                        <outlet property="productTableView" destination="1KA-KS-TJt" id="OvL-eX-sLI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnT-ae-cIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

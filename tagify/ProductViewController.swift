@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ProductViewController: UIViewController {
+class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var productTableView: UITableView!
     var tag = String()
     var products = [Product]()
     var foundProducts = [Product]()
@@ -26,6 +27,19 @@ class ProductViewController: UIViewController {
                 foundProducts.append(product)
             }
         }
-        print("foundProducts: \(foundProducts)")
+        productTableView.reloadData()
+    }
+    
+    // MARK: UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foundProducts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
+        cell.textLabel?.text = "\(foundProducts[indexPath.row].name) Quantity: \(foundProducts[indexPath.row].quantity)"
+        
+        return cell
     }
 }
